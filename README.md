@@ -11,6 +11,7 @@ Hi there 👋
 - 🌳 Decision trees & predictive modeling  
 - 🔍 Causal inference & data-driven decision-making
 
+📫 Reach me at: vaibhav.bagaria@duke.edu  
 🔗 Let’s connect!
 [LinkedIn](https://www.linkedin.com/in/vaibhavbagaria)
 
