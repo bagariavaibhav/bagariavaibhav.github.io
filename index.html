@@ -1,400 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Bagaria</title>
-    <style>
-        /* Importing a clean, modern font from Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        :root {
-            --accent-color: #9C6ADE; /* Elegant purple accent color */
-            --dark-color: #2E294E; /* Deep purple instead of blue */
-            --light-color: #F8F7FC; /* Very light purple tint instead of blue tint */
-            --text-color: #3A3A3A;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--light-color);
-        }
-        
-        header {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 3rem 0 2rem 0;
-            text-align: center;
-        }
-        
-        .profile-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 1rem;
-        }
-        
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid var(--accent-color);
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-        
-        nav {
-            background-color: var(--dark-color);
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--accent-color);
-        }
-        
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 2rem 0;
-        }
-        
-        section {
-            margin-bottom: 3rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        h2 {
-            color: var(--dark-color);
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 50px;
-            background-color: var(--accent-color);
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .project-card {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background: white;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .project-card h3 {
-            color: var(--dark-color);
-        }
-        
-        .project-card a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        
-        .project-card a:hover {
-            text-decoration: underline;
-        }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            width: 100%;
-        }
-        
-        .social-links a {
-            color: var(--accent-color);
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .education-item, .experience-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .education-item h3, .experience-item h3 {
-            margin-bottom: 0.3rem;
-            color: var(--dark-color);
-        }
-        
-        .education-item p, .experience-item p {
-            margin: 0.3rem 0;
-        }
-        
-        .date-location {
-            display: flex;
-            justify-content: space-between;
-            font-style: italic;
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .skill-tag {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-            transition: transform 0.2s;
-        }
-        
-        .skill-tag:hover {
-            transform: translateY(-2px);
-        }
-        
-        .btn {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-block;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #8456c9;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-            .projects {
-                grid-template-columns: 1fr;
-            }
-            .profile-photo {
-                width: 150px;
-                height: 150px;
-            }
-            .date-location {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaibhav Bagaria</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="/api/placeholder/180/180" alt="Profile Photo" class="profile-photo">
-            <h1>Vaibhav Bagaria</h1>
-        </div>
-    </header>
-    
-    <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm Vaibhav! I love blending creativity with strategy—whether it's editing videos, capturing moments through photography, or analyzing market trends. I'm fascinated by how music comes together, passionate about the stock market and crypto, and always on the lookout for the best desserts. If you're into data, design, or optimization, let's connect!
-            </p>
-        </section>
-        
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Master of Science in Quantitative Management: Business Analytics, Strategy Track</h3>
-                <p><strong>Duke University, The Fuqua School of Business</strong></p>
-                <div class="date-location">
-                    <span>Graduating May 2025</span>
-                    <span>Durham, NC</span>
-                </div>
-                <p>GPA: 3.6</p>
-                <p><strong>Data Science Coursework:</strong> Data Science for Business, Decision Analytics & Modeling (Advanced Excel), Deep Learning</p>
-                <p><strong>Strategy Coursework:</strong> Empirical Economic Analysis (Causality Inference), Operations Analytics, People Analytics, Business Fundamentals</p>
-            </div>
-            
-            <div class="education-item">
-                <h3>Bachelor of Business Management</h3>
-                <p><strong>XIM University</strong></p>
-                <div class="date-location">
-                    <span>Graduated August 2021</span>
-                    <span>Bhubaneswar, India</span>
-                </div>
-                <p>GPA: 3.6</p>
-                <p><strong>Key Coursework:</strong> Business Statistics, Business Analysis, Research Methodology, Financial Management, Macro Economics</p>
-                <p>President of Events Club - organized Xamboree, East-India's largest B-School symposium, hosting 3,500+ students</p>
-                <p>Founded Photography Club, X-Shutter, scaled it to 18 team members over three years</p>
-            </div>
-        </section>
-        
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Data Analyst, Founder - Product Analytics Group</h3>
-                <p><strong>Orange Health</strong> - Health tech startup focused on preventive diagnostics</p>
-                <div class="date-location">
-                    <span>April 2022 - April 2024</span>
-                    <span>Bengaluru, India</span>
-                </div>
-                <ul>
-                    <li>Built on-demand, real-time performance metrics infrastructure leveraging SQL and Tableau for blood sample collection data across 28 nodal centers in five cities, enabling product team to cut release cycle time by ~20% within six months</li>
-                    <li>Optimized phlebotomist's service routes by quantitatively analyzing Google Maps data. Collaborated with operations on a rapid go to market strategy, saving ~12% logistics' costs over five months</li>
-                    <li>Utilized A/B testing to generate actionable insights to optimize partner experience. Increased doctor retention by 24% YoY</li>
-                    <li>Automated executive business reviews: Excel to Tableau, saving ~ten man-hours per week</li>
-                    <li>Pioneered granular-level control tower for lab operations leveraging SQL, Mixpanel and Looker to identify and resolve bottlenecks in sample processing, decreasing lab turnaround time by 11%</li>
-                </ul>
-            </div>
-            
-            <div class="experience-item">
-                <h3>Business Analyst</h3>
-                <p><strong>BRM's Furnishing World</strong> - Home furnishings business</p>
-                <div class="date-location">
-                    <span>September 2021 - March 2022</span>
-                    <span>Cuttack, India</span>
-                </div>
-                <ul>
-                    <li>Performed customer segmentation using Advanced Excel to identify distinct demand clusters, enabling targeted marketing campaigns and increasing ROI on marketing spend by ~42%</li>
-                    <li>Implemented barcode-based SKU system for all store items, enhancing inventory visibility and planning, optimizing stock availability, and streamlining invoicing</li>
-                    <li>Conducted primary market research and built a hypothesis testing model to predict high-retention customer segments; launched weekly email campaigns, achieving ~25% open and ~4% click rates</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Driver Drowsiness Detection</h3>
-                    <p>
-                        Designed and implemented a real-time Driver Drowsiness Detection deep learning system using PyTorch and Convolutional Neural Networks. Analyzed a 40K+ image dataset of driver facial expressions to detect drowsiness with 99.93% test accuracy, enabling integration into vehicle safety systems.
-                    </p>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Credit Card Fraud Detection</h3>
-                    <p>
-                        Built Random Forest ML model in R for real-time fraud detection, achieving 82.8% accuracy and an AUC of 0.95 on 555,719 transactions. Addressed class imbalance via downsampling, enhancing model accuracy in identifying fraudulent transactions.
-                    </p>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Real Estate Price Prediction</h3>
-                    <p>
-                        Built multilayer perceptron network in Python to predict house sale prices, optimizing accuracy with regularization and dropout. Analyzed errors and iBuyer profitability, proposing improvements to close a 15% profit margin gap.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <h3>Statistical Methods</h3>
-            <div class="skills">
-                <span class="skill-tag">A/B Testing</span>
-                <span class="skill-tag">Hypothesis Testing</span>
-                <span class="skill-tag">Linear Regression</span>
-                <span class="skill-tag">Logistic Regression</span>
-                <span class="skill-tag">Causal Inference</span>
-                <span class="skill-tag">Random Forest</span>
-                <span class="skill-tag">Time-Series Analysis</span>
-                <span class="skill-tag">Monte Carlo Simulation</span>
-                <span class="skill-tag">Cluster Analysis</span>
-                <span class="skill-tag">Multivariate Analysis</span>
-                <span class="skill-tag">Sampling</span>
-            </div>
-            
-            <h3 style="margin-top: 1.5rem;">Programming & Tools</h3>
-            <div class="skills">
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">NumPy</span>
-                <span class="skill-tag">Pandas</span>
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">R</span>
-                <span class="skill-tag">VBA</span>
-                <span class="skill-tag">Tableau</span>
-                <span class="skill-tag">Looker Studio</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">Advanced Excel</span>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>
-                I'm always interested in new opportunities, collaborations, or just having a chat about data, design, or optimization.
-                Feel free to reach out to me through any of the following channels:
-            </p>
-            <div class="social-links">
-                <p>
-                    <a href="mailto:vaibhav.bagaria@duke.edu">Email: vaibhav.bagaria@duke.edu</a>
-                </p>
-                <p>
-                    <a href="https://linkedin.com/in/vaibhavbagaria">LinkedIn: linkedin.com/in/vaibhavbagaria</a>
-                </p>
-                <p>
-                    <a href="tel:9196382781">Phone: (919) 638-2781</a>
-                </p>
-            </div>
-            <a href="#" class="btn">Download Resume</a>
-        </section>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Vaibhav Bagaria. All rights reserved.</p>
-        <p>Languages: English (Fluent), Hindi (Native), Odia (Native), German (Learning), Spanish (Learning)</p>
-    </footer>
+  <div class="container">
+    <img src="vb159.jpg" alt="Vaibhav Bagaria" class="profile-pic" />
+    <h1>Vaibhav Bagaria</h1>
+    <p class="summary">
+      Data-savvy quantitative strategist skilled in SQL, Tableau, R and Python to build and scale product and growth analytics infrastructure.
+      Proven ability in leading cross-functional initiatives across Analytics, Product, and Tech to deliver business value.
+    </p>
+
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li>
+        <strong>Healthcare Intelligence Dashboard</strong> – Interactive Tableau dashboard on 100K+ patient visits.
+        <a href="https://public.tableau.com/app/profile/vaibhav.bagaria/viz/shared/F45JM2JRF" target="_blank">View</a>
+      </li>
+      <li>
+        <strong>Predicting Real Estate Prices</strong> – Python neural net for house price prediction.
+        <a href="https://github.com/datadilly/real_estate_price_prediction" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <strong>Social Media & Mental Health Causality</strong> – Econometric analysis in R on survey data.
+        <a href="https://github.com/datadilly/social-media-mental-health-causality" target="_blank">GitHub</a>
+      </li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      📍 Durham, NC<br>
+      📧 <a href="mailto:vaibhav.bagaria@duke.edu">vaibhav.bagaria@duke.edu</a><br>
+      🔗 <a href="https://linkedin.com/in/vaibhavbagaria" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/datadilly" target="_blank">GitHub</a>
+    </p>
+
+    <p>
+      📄 <a href="Vaibhav Bagaria - Resume.pdf" download>Download Resume</a>
+    </p>
+  </div>
 </body>
 </html>
